@@ -42,7 +42,7 @@ describe("Concurrency", () => {
     expect(httpClient.pathHasBeenCalled(fourthUrl)).toBeTruthy();
   });
 
-  it.only("should start new request as soon as one finishes", async () => {
+  it("should start new request as soon as one finishes", async () => {
     const maxConcurrency = 2;
     const urls = [firstUrl, secondUrl, thirdUrl, fourthUrl, fifthUrl];
     httpClient.makeWithDelay(firstUrl, 100);
